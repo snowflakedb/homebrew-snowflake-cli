@@ -17,19 +17,23 @@ TMP_OUTPUT=$(mktemp)
 poet snowflake-cli-labs | sed 's/^/  /' | sed 's/ *$//' >> "${TMP_FILE}"
 
 # Updated the formula content between start-end markers
-MAX_LEN=$(awk '{ print length($0); }' "${TMP_FILE}" | sort -n | tail -1 )
-README_FILE="${MY_DIR}/Formula/snowcli.rb"
+FORMULA_TMP_FILE="${MY_DIR}/Formula/snowcli.rb"
 
 LEAD="^# <-- AUTO_START -->$"
 TAIL="^# <-- AUTO_END -->$"
 
-BEGIN_GEN=$(grep -n "${LEAD}" <"${README_FILE}" | sed 's/\(.*\):.*/\1/g')
-END_GEN=$(grep -n "${TAIL}" <"${README_FILE}" | sed 's/\(.*\):.*/\1/g')
-cat <(head -n "${BEGIN_GEN}" "${README_FILE}") \
+BEGIN_GEN=$(grep -n "${LEAD}" <"${FORMULA_TMP_FILE}" | sed 's/\(.*\):.*/\1/g')
+END_GEN=$(grep -n "${TAIL}" <"${FORMULA_TMP_FILE}" | sed 's/\(.*\):.*/\1/g')
+cat <(head -n "${BEGIN_GEN}" "${FORMULA_TMP_FILE}") \
     "${TMP_FILE}" \
-    <(tail -n +"${END_GEN}" "${README_FILE}") \
+    <(tail -n +"${END_GEN}" "${FORMULA_TMP_FILE}") \
     >"${TMP_OUTPUT}"
 
-mv "${TMP_OUTPUT}" "${README_FILE}"
+mv "${TMP_OUTPUT}" "${FORMULA_TMP_FILE}"
 
-echo "Formula update done. Manually update L5 and L6"
+echo "Formula update done."
+echo "Now execute the following steps:"
+echo '1. Find `resource "snowflake-cli-labs" do` '
+echo "2. Copy url and sha"
+echo "3. Paste them in line 5 and 6 in Formula/snowcli.rb"
+
