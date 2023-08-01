@@ -8,7 +8,6 @@
     depends_on "rust" => :build
     depends_on "python3"
 
-# <-- AUTO_START -->
     resource "asn1crypto" do
       url "https://files.pythonhosted.org/packages/de/cf/d547feed25b5244fcb9392e288ff9fdc3280b10260362fc45d37a798a6ee/asn1crypto-1.5.1.tar.gz"
       sha256 "13ae38502be632115abf8a24cbe5f4da52e3b5231990aff31123c805306ccb9c"
@@ -193,7 +192,7 @@
       url "https://files.pythonhosted.org/packages/e2/45/f3b987ad5bf9e08095c1ebe6352238be36f25dd106fde424a160061dce6d/zipp-3.16.2.tar.gz"
       sha256 "ebc15946aa78bd63458992fc81ec3b6f7b1e92d51c35e6de1c3804e73b799147"
     end
-# <-- AUTO_END -->
+
 
 
     def install
