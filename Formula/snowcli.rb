@@ -39,8 +39,8 @@
     end
 
     resource "cryptography" do
-      url "https://files.pythonhosted.org/packages/93/b7/b6b3420a2f027c1067f712eb3aea8653f8ca7490f183f9917879c447139b/cryptography-41.0.2.tar.gz"
-      sha256 "7d230bf856164de164ecb615ccc14c7fc6de6906ddd5b491f3af90d3514c925c"
+      url "https://files.pythonhosted.org/packages/8e/5d/2bf54672898375d081cb24b30baeb7793568ae5d958ef781349e9635d1c8/cryptography-41.0.3.tar.gz"
+      sha256 "6d192741113ef5e30d89dcb5b956ef4e1578f304708701b8b73d38e3e1461f34"
     end
 
     resource "filelock" do
@@ -151,6 +151,11 @@
     resource "rich" do
       url "https://files.pythonhosted.org/packages/e3/12/67d0098eb77005f5e068de639e6f4cfb8f24e6fcb0fd2037df0e1d538fee/rich-13.4.2.tar.gz"
       sha256 "d653d6bccede5844304c605d5aac802c7cf9621efd700b46c7ec2b51ea914898"
+    end
+
+    resource "snowflake-cli-labs" do
+      url "https://files.pythonhosted.org/packages/20/a3/8f72e97bac4a1e676ec263f1e9430422fb41456f311591c482fe34a635d8/snowflake_cli_labs-1.0.1.tar.gz"
+      sha256 "08352d5d0d8b9f40b44b662e2310f723bababbbc28bcd45eeab1add7d1702aba"
     end
 
     resource "snowflake-connector-python-nightly" do
