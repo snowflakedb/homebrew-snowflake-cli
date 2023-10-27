@@ -10,7 +10,7 @@ def main():
     env = jinja2.Environment(
         loader=jinja2.loaders.FileSystemLoader(Path(__file__).parent)
     )
-    template = env.get_template("snowcli.tmpl.rb")
+    template = env.get_template("Formula/snowcli.tmpl.rb")
     packages = subprocess.check_output(["poet", "snowflake-cli-labs"], encoding="utf-8")
 
     sf_pattern = r'\s+resource \"snowflake-cli-labs\" do\s+url \"(.+)\"\s+sha256 \"(\w+)\"\s+end\n'
