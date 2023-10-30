@@ -2,8 +2,8 @@
     include Language::Python::Virtualenv
     desc "A CLI for Snowflake development"
     homepage "https://github.com/snowflake-labs/snowcli"
-    url "https://files.pythonhosted.org/packages/39/87/403367c96d1ae6a56f277ebb6cec6b31e7c156e7b5383c1401ffec45c49a/snowflake_cli_labs-1.2.0.tar.gz"
-    sha256 "6000acf107449991b0dafdf5923838edf642110aec906955b02936c7e8d9f50e"
+    url "https://files.pythonhosted.org/packages/10/0a/d836049423bc2228d31e5d808410553657cf19c63deba4325d67627a0cb2/snowflake_cli_labs-1.2.1.tar.gz"
+    sha256 "3651c4a99aceaaed409de4e314655f185ff65560bf403b015ecff5efe12ba80f"
 
     depends_on "rust" => :build
     depends_on "python3"
@@ -159,8 +159,8 @@
     end
 
     resource "PyYAML" do
-      url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
-      sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
+      url "https://files.pythonhosted.org/packages/cd/e5/af35f7ea75cf72f2cd079c95ee16797de7cd71f29ea7c68ae5ce7be1eda0/PyYAML-6.0.1.tar.gz"
+      sha256 "bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43"
     end
 
     resource "requests" do
@@ -189,8 +189,8 @@
     end
 
     resource "snowflake-cli-labs" do
-      url "https://files.pythonhosted.org/packages/39/87/403367c96d1ae6a56f277ebb6cec6b31e7c156e7b5383c1401ffec45c49a/snowflake_cli_labs-1.2.0.tar.gz"
-      sha256 "6000acf107449991b0dafdf5923838edf642110aec906955b02936c7e8d9f50e"
+      url "https://files.pythonhosted.org/packages/10/0a/d836049423bc2228d31e5d808410553657cf19c63deba4325d67627a0cb2/snowflake_cli_labs-1.2.1.tar.gz"
+      sha256 "3651c4a99aceaaed409de4e314655f185ff65560bf403b015ecff5efe12ba80f"
     end
 
     resource "snowflake-connector-python" do
