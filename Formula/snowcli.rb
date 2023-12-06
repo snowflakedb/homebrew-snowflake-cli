@@ -2,8 +2,8 @@
     include Language::Python::Virtualenv
     desc "A CLI for Snowflake development"
     homepage "https://github.com/snowflake-labs/snowcli"
-    url "https://files.pythonhosted.org/packages/10/0a/d836049423bc2228d31e5d808410553657cf19c63deba4325d67627a0cb2/snowflake_cli_labs-1.2.1.tar.gz"
-    sha256 "3651c4a99aceaaed409de4e314655f185ff65560bf403b015ecff5efe12ba80f"
+    url "https://files.pythonhosted.org/packages/e8/26/e71c27d722b9f9cedb29532569e5fe6c0abe6a50bd5ed203cc50d881fe9f/snowflake_cli_labs-1.2.2.tar.gz"
+    sha256 "5c2a4631758739eb5a17a4c7a33f463e1c3793801541546a448cdc99a1441634"
 
     depends_on "rust" => :build
     depends_on "python3"
@@ -14,8 +14,8 @@
     end
 
     resource "certifi" do
-      url "https://files.pythonhosted.org/packages/98/98/c2ff18671db109c9f10ed27f5ef610ae05b73bd876664139cf95bd1429aa/certifi-2023.7.22.tar.gz"
-      sha256 "539cc1d13202e33ca466e88b2807e29f4c13049d6d87031a3c110744495cb082"
+      url "https://files.pythonhosted.org/packages/d4/91/c89518dd4fe1f3a4e3f6ab7ff23cb00ef2e8c9adf99dacc618ad5e068e28/certifi-2023.11.17.tar.gz"
+      sha256 "9b469f3a900bf28dc19b8cfbf8019bf47f7fdd1a65a1d4ffb98fc14166beb4d1"
     end
 
     resource "cffi" do
@@ -24,8 +24,8 @@
     end
 
     resource "charset-normalizer" do
-      url "https://files.pythonhosted.org/packages/6d/b3/aa417b4e3ace24067f243e45cceaffc12dba6b8bd50c229b43b3b163768b/charset-normalizer-3.3.1.tar.gz"
-      sha256 "d9137a876020661972ca6eec0766d81aef8a5627df628b664b234b73396e727e"
+      url "https://files.pythonhosted.org/packages/63/09/c1bc53dab74b1816a00d8d030de5bf98f724c52c1635e07681d312f20be8/charset-normalizer-3.3.2.tar.gz"
+      sha256 "f30c3cb33b24454a82faecaf01b19c18562b1e89558fb6c56de4d9118a032fd5"
     end
 
     resource "click" do
@@ -39,13 +39,13 @@
     end
 
     resource "cryptography" do
-      url "https://files.pythonhosted.org/packages/16/a7/38fdcdd634515f589c8c723608c0f0b38d66c6c2320b3095967486f3045a/cryptography-41.0.5.tar.gz"
-      sha256 "392cb88b597247177172e02da6b7a63deeff1937fa6fec3bbf902ebd75d97ec7"
+      url "https://files.pythonhosted.org/packages/ce/b3/13a12ea7edb068de0f62bac88a8ffd92cc2901881b391839851846b84a81/cryptography-41.0.7.tar.gz"
+      sha256 "13f93ce9bea8016c253b34afc6bd6a75993e5c40672ed5405a9c832f0d4a00bc"
     end
 
     resource "filelock" do
-      url "https://files.pythonhosted.org/packages/6c/93/59c180bd2d637ad8ff58bacd3187abdd1af3a76d26d34a2544cec93dbfcc/filelock-3.13.0.tar.gz"
-      sha256 "63c6052c82a1a24c873a549fbd39a26982e8f35a3016da231ead11a5be9dad44"
+      url "https://files.pythonhosted.org/packages/70/70/41905c80dcfe71b22fb06827b8eae65781783d4a14194bce79d16a013263/filelock-3.13.1.tar.gz"
+      sha256 "521f5f56c50f8426f5e03ad3b281b490a87ef15bc6c526f168290f0c7148d44e"
     end
 
     resource "gitdb" do
@@ -59,13 +59,13 @@
     end
 
     resource "idna" do
-      url "https://files.pythonhosted.org/packages/8b/e1/43beb3d38dba6cb420cefa297822eac205a277ab43e5ba5d5c46faf96438/idna-3.4.tar.gz"
-      sha256 "814f528e8dead7d329833b91c5faa87d60bf71824cd12a7530b5526063d02cb4"
+      url "https://files.pythonhosted.org/packages/bf/3f/ea4b9117521a1e9c50344b909be7886dd00a519552724809bb1f486986c2/idna-3.6.tar.gz"
+      sha256 "9ecdbbd083b06798ae1e86adcbfe8ab1479cf864e4ee30fe4e46a003d12491ca"
     end
 
     resource "importlib-metadata" do
-      url "https://files.pythonhosted.org/packages/33/44/ae06b446b8d8263d712a211e959212083a5eda2bf36d57ca7415e03f6f36/importlib_metadata-6.8.0.tar.gz"
-      sha256 "dbace7892d8c0c4ac1ad096662232f831d4e64f4c4545bd53016a3e9d4654743"
+      url "https://files.pythonhosted.org/packages/db/5a/392426ddb5edfebfcb232ab7a47e4a827aa1d5b5267a5c20c448615feaa9/importlib_metadata-7.0.0.tar.gz"
+      sha256 "7fc841f8b8332803464e5dc1c63a2e59121f46ca186c0e2e182e80bf8c1319f7"
     end
 
     resource "jaraco.classes" do
@@ -79,8 +79,8 @@
     end
 
     resource "keyring" do
-      url "https://files.pythonhosted.org/packages/14/c5/7a2a66489c66ee29562300ddc5be63636f70b4025a74df71466e62d929b1/keyring-24.2.0.tar.gz"
-      sha256 "ca0746a19ec421219f4d713f848fa297a661a8a8c1504867e55bfb5e09091509"
+      url "https://files.pythonhosted.org/packages/69/cd/889c6569a7e5e9524bc1e423fd2badd967c4a5dcd670c04c2eff92a9d397/keyring-24.3.0.tar.gz"
+      sha256 "e730ecffd309658a08ee82535a3b5ec4b4c8669a9be11efb66249d8e0aeb9a25"
     end
 
     resource "markdown-it-py" do
@@ -134,8 +134,8 @@
     end
 
     resource "Pygments" do
-      url "https://files.pythonhosted.org/packages/d6/f7/4d461ddf9c2bcd6a4d7b2b139267ca32a69439387cc1f02a924ff8883825/Pygments-2.16.1.tar.gz"
-      sha256 "1daff0494820c69bc8941e407aa20f577374ee88364ee10a98fdbe0aece96e29"
+      url "https://files.pythonhosted.org/packages/55/59/8bccf4157baf25e4aa5a0bb7fa3ba8600907de105ebc22b0c78cfbf6f565/pygments-2.17.2.tar.gz"
+      sha256 "da46cec9fd2de5be3a8a784f434e4c4ab670b4ff54d605c4c2717e9d49c4c367"
     end
 
     resource "PyJWT" do
@@ -189,8 +189,8 @@
     end
 
     resource "snowflake-cli-labs" do
-      url "https://files.pythonhosted.org/packages/10/0a/d836049423bc2228d31e5d808410553657cf19c63deba4325d67627a0cb2/snowflake_cli_labs-1.2.1.tar.gz"
-      sha256 "3651c4a99aceaaed409de4e314655f185ff65560bf403b015ecff5efe12ba80f"
+      url "https://files.pythonhosted.org/packages/e8/26/e71c27d722b9f9cedb29532569e5fe6c0abe6a50bd5ed203cc50d881fe9f/snowflake_cli_labs-1.2.2.tar.gz"
+      sha256 "5c2a4631758739eb5a17a4c7a33f463e1c3793801541546a448cdc99a1441634"
     end
 
     resource "snowflake-connector-python" do
@@ -219,8 +219,8 @@
     end
 
     resource "types-setuptools" do
-      url "https://files.pythonhosted.org/packages/1f/32/ad55729b96c07993bbf83a0a734a3ee8402ea42268939aeae30c4f3600d0/types-setuptools-68.2.0.0.tar.gz"
-      sha256 "a4216f1e2ef29d089877b3af3ab2acf489eb869ccaf905125c69d2dc3932fd85"
+      url "https://files.pythonhosted.org/packages/aa/dc/27d4819c27b504bbd2e8ae5aa907fe72c70af8ff90b8b4cdb96316275844/types-setuptools-69.0.0.0.tar.gz"
+      sha256 "b0a06219f628c6527b2f8ce770a4f47550e00d3e8c3ad83e2dc31bc6e6eda95d"
     end
 
     resource "typing-extensions" do
