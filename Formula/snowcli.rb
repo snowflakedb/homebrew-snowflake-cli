@@ -2,8 +2,8 @@
     include Language::Python::Virtualenv
     desc "A CLI for Snowflake development"
     homepage "https://github.com/snowflake-labs/snowcli"
-    url "https://files.pythonhosted.org/packages/e8/26/e71c27d722b9f9cedb29532569e5fe6c0abe6a50bd5ed203cc50d881fe9f/snowflake_cli_labs-1.2.2.tar.gz"
-    sha256 "5c2a4631758739eb5a17a4c7a33f463e1c3793801541546a448cdc99a1441634"
+    url "https://files.pythonhosted.org/packages/35/1b/118f94e7ba7abad21ddf1d7abc03df1dc02c295ab1c588a47f7a5ffdca80/snowflake_cli_labs-1.2.3.tar.gz"
+    sha256 "b5d4017eea5c86703e5504bd9b7b39d992580fa197ee7dd8a7c1217a7eb90ee8"
 
     depends_on "rust" => :build
     depends_on "python3"
@@ -189,8 +189,8 @@
     end
 
     resource "snowflake-cli-labs" do
-      url "https://files.pythonhosted.org/packages/e8/26/e71c27d722b9f9cedb29532569e5fe6c0abe6a50bd5ed203cc50d881fe9f/snowflake_cli_labs-1.2.2.tar.gz"
-      sha256 "5c2a4631758739eb5a17a4c7a33f463e1c3793801541546a448cdc99a1441634"
+      url "https://files.pythonhosted.org/packages/35/1b/118f94e7ba7abad21ddf1d7abc03df1dc02c295ab1c588a47f7a5ffdca80/snowflake_cli_labs-1.2.3.tar.gz"
+      sha256 "b5d4017eea5c86703e5504bd9b7b39d992580fa197ee7dd8a7c1217a7eb90ee8"
     end
 
     resource "snowflake-connector-python" do
@@ -224,8 +224,8 @@
     end
 
     resource "typing-extensions" do
-      url "https://files.pythonhosted.org/packages/1f/7a/8b94bb016069caa12fc9f587b28080ac33b4fbb8ca369b98bc0a4828543e/typing_extensions-4.8.0.tar.gz"
-      sha256 "df8e4339e9cb77357558cbdbceca33c303714cf861d1eef15e1070055ae8b7ef"
+      url "https://files.pythonhosted.org/packages/0c/1d/eb26f5e75100d531d7399ae800814b069bc2ed2a7410834d57374d010d96/typing_extensions-4.9.0.tar.gz"
+      sha256 "23478f88c37f27d76ac8aee6c905017a143b0b1b886c3c9f66bc2fd94f9f5783"
     end
 
     resource "urllib3" do
