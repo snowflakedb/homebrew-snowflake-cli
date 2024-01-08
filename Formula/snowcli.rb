@@ -2,8 +2,8 @@
     include Language::Python::Virtualenv
     desc "A CLI for Snowflake development"
     homepage "https://github.com/snowflake-labs/snowcli"
-    url "https://files.pythonhosted.org/packages/35/1b/118f94e7ba7abad21ddf1d7abc03df1dc02c295ab1c588a47f7a5ffdca80/snowflake_cli_labs-1.2.3.tar.gz"
-    sha256 "b5d4017eea5c86703e5504bd9b7b39d992580fa197ee7dd8a7c1217a7eb90ee8"
+    url "https://files.pythonhosted.org/packages/45/8a/1d7eb85f6aca8d5a3e6a420ad77cf5deec0442d26b19e10c826979ccafe9/snowflake_cli_labs-1.2.4.tar.gz"
+    sha256 "063cfb5174fdb173ae1d8f0066347194546268fa6d9db63edac63a61d983ec9f"
 
     depends_on "rust" => :build
     depends_on "python3"
@@ -64,8 +64,8 @@
     end
 
     resource "importlib-metadata" do
-      url "https://files.pythonhosted.org/packages/db/5a/392426ddb5edfebfcb232ab7a47e4a827aa1d5b5267a5c20c448615feaa9/importlib_metadata-7.0.0.tar.gz"
-      sha256 "7fc841f8b8332803464e5dc1c63a2e59121f46ca186c0e2e182e80bf8c1319f7"
+      url "https://files.pythonhosted.org/packages/90/b4/206081fca69171b4dc1939e77b378a7b87021b0f43ce07439d49d8ac5c84/importlib_metadata-7.0.1.tar.gz"
+      sha256 "f238736bb06590ae52ac1fab06a3a9ef1d8dce2b7a35b5ab329371d6c8f5d2cc"
     end
 
     resource "jaraco.classes" do
@@ -129,8 +129,8 @@
     end
 
     resource "pycryptodomex" do
-      url "https://files.pythonhosted.org/packages/14/c9/09d5df04c9f29ae1b49d0e34c9934646b53bb2131a55e8ed2a0d447c7c53/pycryptodomex-3.19.0.tar.gz"
-      sha256 "af83a554b3f077564229865c45af0791be008ac6469ef0098152139e6bd4b5b6"
+      url "https://files.pythonhosted.org/packages/3f/13/84f2aea851d75e12e7f32ccc11a00f1defc3d285b4ed710e5d049f31c5a6/pycryptodomex-3.19.1.tar.gz"
+      sha256 "0b7154aff2272962355f8941fd514104a88cb29db2d8f43a29af900d6398eb1c"
     end
 
     resource "Pygments" do
@@ -189,8 +189,8 @@
     end
 
     resource "snowflake-cli-labs" do
-      url "https://files.pythonhosted.org/packages/35/1b/118f94e7ba7abad21ddf1d7abc03df1dc02c295ab1c588a47f7a5ffdca80/snowflake_cli_labs-1.2.3.tar.gz"
-      sha256 "b5d4017eea5c86703e5504bd9b7b39d992580fa197ee7dd8a7c1217a7eb90ee8"
+      url "https://files.pythonhosted.org/packages/45/8a/1d7eb85f6aca8d5a3e6a420ad77cf5deec0442d26b19e10c826979ccafe9/snowflake_cli_labs-1.2.4.tar.gz"
+      sha256 "063cfb5174fdb173ae1d8f0066347194546268fa6d9db63edac63a61d983ec9f"
     end
 
     resource "snowflake-connector-python" do
@@ -219,8 +219,8 @@
     end
 
     resource "types-setuptools" do
-      url "https://files.pythonhosted.org/packages/aa/dc/27d4819c27b504bbd2e8ae5aa907fe72c70af8ff90b8b4cdb96316275844/types-setuptools-69.0.0.0.tar.gz"
-      sha256 "b0a06219f628c6527b2f8ce770a4f47550e00d3e8c3ad83e2dc31bc6e6eda95d"
+      url "https://files.pythonhosted.org/packages/c5/25/da153b9ba3bf57757870c3831f7a15abb4a9dfd55a1b78d461389b4ee9f7/types-setuptools-69.0.0.20240106.tar.gz"
+      sha256 "e077f9089578df3c9938f6e4aa1633f182ba6740a6fdb1333f162bae5dfcbadc"
     end
 
     resource "typing-extensions" do
