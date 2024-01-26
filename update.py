@@ -19,13 +19,13 @@ def main():
         raise ValueError("snowflake dependency not present in deps")
     sf_url, sf_sha = match[0]
 
-
+    version = subprocess.check_output(["snow", "--version"], encoding="utf-8").split()[-1]
 
     with open("Formula/snowcli.rb", "w+") as fh:
         fh.write(template.render(
             sf_url=sf_url,
             sf_sha=sf_sha,
-            packages=indent(packages, "  ")
+            version=version,
         ))
 
 
