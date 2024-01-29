@@ -1,0 +1,26 @@
+name: Build
+
+on:
+  pull_request:
+    branches:
+      - "*"
+  push:
+    tags:
+      - "v*" # Push events to matching v*, i.e. v1.0, v20.15.10
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build packages
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Install formula
+        run: |
+          brew install -s Formula/snowcli.rb
+      - name: Check snow commands
+        run: |
+          snow --help
