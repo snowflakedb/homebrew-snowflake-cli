@@ -13,8 +13,9 @@ jobs:
     name: Build packages
     runs-on: macos-latest
     steps:
-      - name: Install formula
+      - name: Checkout
         uses: actions/checkout@v4
+      - name: Install formula
         run: |
           brew install -s Formula/snowcli.rb
       - name: Check snow commands
