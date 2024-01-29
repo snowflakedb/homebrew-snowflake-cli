@@ -2,8 +2,8 @@
     include Language::Python::Virtualenv
     desc "A CLI for Snowflake development"
     homepage "https://github.com/snowflake-labs/snowcli"
-    url "https://files.pythonhosted.org/packages/45/8a/1d7eb85f6aca8d5a3e6a420ad77cf5deec0442d26b19e10c826979ccafe9/snowflake_cli_labs-1.2.4.tar.gz"
-    sha256 "063cfb5174fdb173ae1d8f0066347194546268fa6d9db63edac63a61d983ec9f"
+    url "https://files.pythonhosted.org/packages/76/dc/89bee53a044b5674fdce4f484683de4cb70443533ab145fa6aa2ffc8a7cb/snowflake_cli_labs-1.2.5.tar.gz"
+    sha256 "371d872e0a7e939fd5c6a56a36a8464fb08c3b9d27ed638352832c57331e8270"
 
     depends_on "rust" => :build
     depends_on "python3"
@@ -89,8 +89,8 @@
     end
 
     resource "MarkupSafe" do
-      url "https://files.pythonhosted.org/packages/6d/7c/59a3248f411813f8ccba92a55feaac4bf360d29e2ff05ee7d8e1ef2d7dbf/MarkupSafe-2.1.3.tar.gz"
-      sha256 "af598ed32d6ae86f1b747b82783958b1a4ab8f617b06fe68795c7f026abbdcad"
+      url "https://files.pythonhosted.org/packages/fb/5a/fb1326fe32913e663c8e2d6bdf7cde6f472e51f9c21f0768d9b9080fe7c5/MarkupSafe-2.1.4.tar.gz"
+      sha256 "3aae9af4cac263007fd6309c64c6ab4506dd2b79382d9d19a1994f9240b8db4f"
     end
 
     resource "mdurl" do
@@ -99,8 +99,8 @@
     end
 
     resource "more-itertools" do
-      url "https://files.pythonhosted.org/packages/2d/73/3557e45746fcaded71125c0a1c0f87616e8258c78391f0c365bf97bbfc99/more-itertools-10.1.0.tar.gz"
-      sha256 "626c369fa0eb37bac0291bce8259b332fd59ac792fa5497b59837309cd5b114a"
+      url "https://files.pythonhosted.org/packages/df/ad/7905a7fd46ffb61d976133a4f47799388209e73cbc8c1253593335da88b4/more-itertools-10.2.0.tar.gz"
+      sha256 "8fccb480c43d3e99a00087634c06dd02b0d50fbf088b380de5a41a015ec239e1"
     end
 
     resource "oscrypto" do
@@ -129,8 +129,8 @@
     end
 
     resource "pycryptodomex" do
-      url "https://files.pythonhosted.org/packages/3f/13/84f2aea851d75e12e7f32ccc11a00f1defc3d285b4ed710e5d049f31c5a6/pycryptodomex-3.19.1.tar.gz"
-      sha256 "0b7154aff2272962355f8941fd514104a88cb29db2d8f43a29af900d6398eb1c"
+      url "https://files.pythonhosted.org/packages/31/a4/b03a16637574312c1b54c55aedeed8a4cb7d101d44058d46a0e5706c63e1/pycryptodomex-3.20.0.tar.gz"
+      sha256 "7a710b79baddd65b806402e14766c721aee8fb83381769c27920f26476276c1e"
     end
 
     resource "Pygments" do
@@ -154,8 +154,8 @@
     end
 
     resource "pytz" do
-      url "https://files.pythonhosted.org/packages/69/4f/7bf883f12ad496ecc9514cd9e267b29a68b3e9629661a2bbc24f80eff168/pytz-2023.3.post1.tar.gz"
-      sha256 "7b4fddbeb94a1eba4b557da24f19fdf9db575192544270a9101d8509f9f43d7b"
+      url "https://files.pythonhosted.org/packages/ae/fd/c5bafe60236bc2a464452f916b6a1806257109c8954d6a7d19e5d4fb012f/pytz-2023.4.tar.gz"
+      sha256 "31d4583c4ed539cd037956140d695e42c033a19e984bfce9964a3f7d59bc2b40"
     end
 
     resource "PyYAML" do
@@ -189,8 +189,8 @@
     end
 
     resource "snowflake-cli-labs" do
-      url "https://files.pythonhosted.org/packages/45/8a/1d7eb85f6aca8d5a3e6a420ad77cf5deec0442d26b19e10c826979ccafe9/snowflake_cli_labs-1.2.4.tar.gz"
-      sha256 "063cfb5174fdb173ae1d8f0066347194546268fa6d9db63edac63a61d983ec9f"
+      url "https://files.pythonhosted.org/packages/76/dc/89bee53a044b5674fdce4f484683de4cb70443533ab145fa6aa2ffc8a7cb/snowflake_cli_labs-1.2.5.tar.gz"
+      sha256 "371d872e0a7e939fd5c6a56a36a8464fb08c3b9d27ed638352832c57331e8270"
     end
 
     resource "snowflake-connector-python" do
@@ -219,8 +219,8 @@
     end
 
     resource "types-setuptools" do
-      url "https://files.pythonhosted.org/packages/c5/25/da153b9ba3bf57757870c3831f7a15abb4a9dfd55a1b78d461389b4ee9f7/types-setuptools-69.0.0.20240106.tar.gz"
-      sha256 "e077f9089578df3c9938f6e4aa1633f182ba6740a6fdb1333f162bae5dfcbadc"
+      url "https://files.pythonhosted.org/packages/33/d2/d51f630222844d3d39dc80cb7f34f3df1765ee2ffed22f9b82e111afe1cc/types-setuptools-69.0.0.20240125.tar.gz"
+      sha256 "22ad498cb585b22ce8c97ada1fccdf294a2e0dd7dc984a28535a84ea82f45b3f"
     end
 
     resource "typing-extensions" do
