@@ -1,14 +1,12 @@
 name: Build
 
-on:
-  push:
-    branches:
-      - '*'
+on: [push]
 
 jobs:
   build:
     name: Build packages
     runs-on: macos-latest
+    timeout-minutes: 5
     steps:
       - name: Checkout
         uses: actions/checkout@v4
