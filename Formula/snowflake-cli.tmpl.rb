@@ -1,7 +1,7 @@
-  class Snowcli < Formula
+  class SnowflakeCli < Formula
     include Language::Python::Virtualenv
     desc "A CLI for Snowflake development"
-    homepage "https://github.com/snowflake-labs/snowcli"
+    homepage "https://github.com/snowflake-labs/snowflake-cli"
     url "{{ sf_url }}"
     sha256 "{{ sf_sha }}"
 

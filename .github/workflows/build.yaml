@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Install formula
         run: |
-          brew install -s Formula/snowcli.rb
+          brew install -s Formula/snowflake-cli.rb
       - name: Check snow commands
         run: |
           snow --help
