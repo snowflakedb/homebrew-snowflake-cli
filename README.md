@@ -1,4 +1,4 @@
-# homebrew-snowcli
+# homebrew-snowflake-cli
 
 Homebrew formula allowing for installation of Snowflake CLI using homebrew tap.
 
