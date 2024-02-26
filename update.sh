@@ -14,6 +14,7 @@ pip install homebrew-pypi-poet
 
 # Update formula
 python update.py
+python update-snowcli.py
 
 VERSION="$(pip freeze | grep snowflake-cli | cut -d = -f 3)"
 
