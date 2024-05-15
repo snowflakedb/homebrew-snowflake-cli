@@ -23,4 +23,5 @@ rm -rf "${ENV}"
 
 echo
 echo "Formula update done."
+echo "git checkout -b bump-version-${VERSION}"
 echo "git commit -m 'Update formula to v${VERSION}'"
