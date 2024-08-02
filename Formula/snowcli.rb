@@ -2,8 +2,8 @@
     include Language::Python::Virtualenv
     desc "A CLI for Snowflake development"
     homepage "https://github.com/snowflake-labs/snowflake-cli"
-    url "https://files.pythonhosted.org/packages/d4/0a/fecd104c5bcce762024a672784a30f0357b28f68ef429b76746c5a211422/snowflake_cli_labs-2.6.0.tar.gz"
-    sha256 "1037a85ad07b223f57ee86ac96f2f3278b9b876686e2ce3eeb6c64a4c5c6686c"
+    url "https://files.pythonhosted.org/packages/e7/bb/31bda15a7c5ace34ff8d074aad817d7ecdc8ec21e26982f6092081c8d391/snowflake_cli_labs-2.7.0.tar.gz"
+    sha256 "11e431ddd06f304c6a3ca1f829f16e889fd4a9c0506a3f67aa0bff6b917ff84b"
 
     depends_on "python3"
 
@@ -13,7 +13,7 @@
       venv.instance_variable_get(:@formula).system venv.instance_variable_get(:@venv_root)/"bin/python",
         "-m", "ensurepip", "--upgrade"
       venv.instance_variable_get(:@formula).system venv.instance_variable_get(:@venv_root)/"bin/python",
-        "-m", "pip", "install", "snowflake-cli-labs==2.6.0"
+        "-m", "pip", "install", "snowflake-cli-labs==2.7.0"
       bin.install_symlink "#{libexec}/bin/snow" => "snow"
     end
 
