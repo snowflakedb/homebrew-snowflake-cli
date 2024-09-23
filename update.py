@@ -10,23 +10,29 @@ def main():
         loader=jinja2.loaders.FileSystemLoader(Path(__file__).parent)
     )
     template = env.get_template("Formula/snowflake-cli.tmpl.rb")
-    packages = subprocess.check_output(["poet", "snowflake-cli-labs"], encoding="utf-8")
+    packages = subprocess.check_output(["poet", "snowflake-cli"], encoding="utf-8")
 
-    sf_pattern = r'\s+resource \"snowflake-cli-labs\" do\s+url \"(.+)\"\s+sha256 \"(\w+)\"\s+end\n'
+    sf_pattern = (
+        r"\s+resource \"snowflake-cli\" do\s+url \"(.+)\"\s+sha256 \"(\w+)\"\s+end\n"
+    )
     match = re.findall(sf_pattern, packages)
     if not match:
         raise ValueError("snowflake dependency not present in deps")
     sf_url, sf_sha = match[0]
 
-    version = subprocess.check_output(["snow", "--version"], encoding="utf-8").split()[-1]
+    version = subprocess.check_output(["snow", "--version"], encoding="utf-8").split()[
+        -1
+    ]
 
     with open("Formula/snowflake-cli.rb", "w+") as fh:
-        fh.write(template.render(
-            sf_url=sf_url,
-            sf_sha=sf_sha,
-            version=version,
-        ))
+        fh.write(
+            template.render(
+                sf_url=sf_url,
+                sf_sha=sf_sha,
+                version=version,
+            )
+        )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
