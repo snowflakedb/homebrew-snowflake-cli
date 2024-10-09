@@ -1,9 +1,9 @@
   class Snowcli < Formula
     include Language::Python::Virtualenv
     desc "A CLI for Snowflake development"
-    homepage "https://github.com/snowflake-labs/snowflake-cli"
-    url "https://files.pythonhosted.org/packages/2e/b4/a5b038f0e6758fd42fa48688d7a1cba8538a2cf19b84bb70fcce63474ebd/snowflake_cli_labs-3.0.0.tar.gz"
-    sha256 "5f3bd4d2d988fb66603d1bcba2dbd69ea1955cd8b56002c8a3e24d5aef595d30"
+    homepage "https://github.com/snowflakedb/snowflake-cli"
+    url "https://files.pythonhosted.org/packages/b4/9e/bd9ed74b85dab344eae3a5f10fbd5716c64ffd74b771726dbf7965a3a24f/snowflake_cli-3.0.1.tar.gz"
+    sha256 "28b68103179eaa9d507a2cd1632113f8db17427a578bce1d7d7df3ee79f90a92"
 
     depends_on "python3"
 
@@ -13,7 +13,7 @@
       venv.instance_variable_get(:@formula).system venv.instance_variable_get(:@venv_root)/"bin/python",
         "-m", "ensurepip", "--upgrade"
       venv.instance_variable_get(:@formula).system venv.instance_variable_get(:@venv_root)/"bin/python",
-        "-m", "pip", "install", "snowflake-cli-labs==3.0.0"
+        "-m", "pip", "install", "snowflake-cli==3.0.1"
       bin.install_symlink "#{libexec}/bin/snow" => "snow"
     end
 
