@@ -9,7 +9,7 @@ python -m venv "${ENV}"
 source "${ENV}/bin/activate"
 
 # Install requirements
-pip install snowflake-cli-labs
+pip install snowflake-cli
 pip install homebrew-pypi-poet
 
 # Update formula
