@@ -5,7 +5,7 @@ set -euo pipefail
 ENV="homebrew-tmp-env"
 
 rm -rf "${ENV}"
-python -m venv "${ENV}"
+python3 -m venv "${ENV}"
 source "${ENV}/bin/activate"
 
 # Install requirements
@@ -13,8 +13,8 @@ pip install snowflake-cli
 pip install homebrew-pypi-poet
 
 # Update formula
-python update.py
-python update-snowcli.py
+python3 update.py
+python3 update-snowcli.py
 
 VERSION="$(pip freeze | grep snowflake-cli | cut -d = -f 3)"
 
