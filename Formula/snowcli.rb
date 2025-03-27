@@ -13,7 +13,7 @@
       venv.instance_variable_get(:@formula).system venv.instance_variable_get(:@venv_root)/"bin/python",
         "-m", "ensurepip", "--upgrade"
       venv.instance_variable_get(:@formula).system venv.instance_variable_get(:@venv_root)/"bin/python",
-        "-m", "pip", "install", "snowflake-cli==3.5.0"
+        "-m", "pip", "install", "snowflake-cli"
       bin.install_symlink "#{libexec}/bin/snow" => "snow"
     end
 
