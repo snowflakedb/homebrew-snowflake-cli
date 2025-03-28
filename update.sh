@@ -9,14 +9,11 @@ python3 -m venv "${ENV}"
 source "${ENV}/bin/activate"
 
 # Install requirements
-pip install snowflake-cli
-pip install homebrew-pypi-poet
+pip install -r requirements.txt
 
 # Update formula
-python3 update.py
-python3 update-snowcli.py
-
-VERSION="$(pip freeze | grep snowflake-cli | cut -d = -f 3)"
+VERSION="$(python3 update.py snowcli.tmpl.rb snowcli.rb)"
+python3 update.py snowflake-cli.tmpl.rb snowflake-cli.rb
 
 # Remove venv
 rm -rf "${ENV}"

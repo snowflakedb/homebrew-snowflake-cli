@@ -10,11 +10,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Install formula
+      - name: Install and check casks
         run: |
-          brew install --formula -s Formula/snowcli.rb
-          brew uninstall snowcli
-          brew install --formula -s Formula/snowflake-cli.rb
-      - name: Check snow commands
-        run: |
-          snow --help
+          brew install --debug --cask ./Casks/snowflake-cli.rb
+          export PATH="/Applications/SnowflakeCLI.app/Contents/MacOS:$PATH"
+          which snow        
+          snow --version
+          brew install --debug --cask ./Casks/snowcli.rb
+          export PATH="/Applications/SnowCLI.app/Contents/MacOS:$PATH"
+          which snow
+          snow --version
+          
+
