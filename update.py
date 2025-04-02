@@ -53,8 +53,7 @@ def get_remote_file_directory(architecture: str, version: str) -> str:
 
 def find_latest_version(site_text: str) -> str:
     matches = re.findall(VERSION_PATTERN, site_text)
-    matches.sort()
-    return matches[-1]
+    return max(matches)
 
 def get_sha_for_latest_version_file(architecture:str) -> str:
     latest_version = find_latest_version(get_repo_html(architecture))

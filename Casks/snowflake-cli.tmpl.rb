@@ -7,9 +7,9 @@ cask "snowflake-cli" do
   arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
 
   if Hardware::CPU.intel?
-    sha256 "{{ sf_intel_sha}}"
+    sha256 "{{ sf_intel_sha }}"
   else
-    sha256 "{{ sf_arm_sha}}"
+    sha256 "{{ sf_arm_sha }}"
   end
 
   url "https://sfc-repo.snowflakecomputing.com/snowflake-cli/darwin_#{arch}/#{version}/snowflake-cli-#{version}-darwin-#{arch}.pkg"
