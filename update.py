@@ -44,6 +44,7 @@ def main(template_name: str, file_name):
                 sf_arm_sha=sha_for_arm,
             )
         )
+    print(latest_version_arm)
 
 def get_repo_html(architecture: str) -> str:
     return requests.get(SNOWFLAKE_REPO.format(architecture)).text
