@@ -23,8 +23,6 @@ jobs:
           eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
           export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin/brew
           brew doctor
-      - name: Install and check casks
-        run: |
           brew install --debug --cask ./Casks/snowflake-cli.rb
           export PATH="/Applications/SnowflakeCLI.app/Contents/MacOS:$PATH"
           which snow        
