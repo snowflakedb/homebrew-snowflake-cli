@@ -40,7 +40,7 @@ def main(template_name: str, file_name):
     sha_for_intel_linux = get_sha_for_latest_version_file(LINUX, INTEL)
     sha_for_arm_linux = get_sha_for_latest_version_file(LINUX, AARCH64)
 
-
+    print(f"SHA for Intel: {sha_for_intel}")
 
     if not template_path.exists():
         raise ValueError(f"Template file not found: {template}")
@@ -51,7 +51,7 @@ def main(template_name: str, file_name):
                 sf_version=latest_version_arm,
                 sf_intel_sha=sha_for_intel,
                 sf_arm_sha=sha_for_arm,
-                sf_intel_linux_sha=sha_for_intel_linux,
+                sf_linux_intel_sha=sha_for_intel_linux,
                 sf_linux_aarch_sha=sha_for_arm_linux
             )
         )
@@ -61,6 +61,7 @@ def get_repo_html(platform: str, architecture: str) -> str:
     return requests.get(SNOWFLAKE_REPO.format(platform, architecture)).text
 
 def get_remote_file_directory(platform: str, architecture: str, version: str) -> str:
+    print(VERSION_DIR.format(platform, architecture, version))
     return requests.get(VERSION_DIR.format(platform, architecture, version)).text
 
 def find_latest_version(site_text: str) -> str:
@@ -69,6 +70,7 @@ def find_latest_version(site_text: str) -> str:
 
 def get_sha_for_latest_version_file(platform: str, architecture:str) -> str:
     latest_version = find_latest_version(get_repo_html(platform, architecture))
+    print(latest_version)
     return re.findall(SHA_PATTERN, get_remote_file_directory(platform, architecture, latest_version))[0]
 
 
