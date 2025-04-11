@@ -20,6 +20,7 @@ cask "snowcli" do
 
   elsif RbConfig::CONFIG["host_os"].include?("linux")
     os = "linux"
+    puts "linux detected"
 
     if Hardware::CPU.intel?
       sha256 "38d39b391d759ec27fdeabe2da902be0367b642632bf59ce1181ec15966a9dd5"
