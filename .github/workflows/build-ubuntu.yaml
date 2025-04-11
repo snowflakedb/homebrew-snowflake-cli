@@ -13,7 +13,7 @@ jobs:
       - name: Install brew
         run: |
           sudo apt update
-          sudo apt-get install build-essential curl git -y
+          sudo apt-get install build-essential
           /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
            eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
           brew doctor
