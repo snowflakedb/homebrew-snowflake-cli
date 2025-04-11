@@ -5,7 +5,10 @@ on: [push]
 jobs:
   build:
     name: Build packages
-    runs-on: macos-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, fedora-latest]
     timeout-minutes: 5
     steps:
       - name: Checkout
