@@ -21,6 +21,7 @@ jobs:
           echo >> /home/runner/.bashrc
           echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/runner/.bashrc
           eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+          export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin/brew
           brew doctor
       - name: Install and check casks
         run: |
