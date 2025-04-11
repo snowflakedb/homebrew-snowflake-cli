@@ -1,0 +1,24 @@
+name: Build[MacOS]
+
+on: [push]
+
+jobs:
+  build:
+    name: Build packages
+    runs-on: macos-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install and check casks
+        run: |
+          brew install --debug --cask ./Casks/snowflake-cli.rb
+          export PATH="/Applications/SnowflakeCLI.app/Contents/MacOS:$PATH"
+          which snow        
+          snow --version
+          brew install --debug --cask ./Casks/snowcli.rb
+          export PATH="/Applications/SnowCLI.app/Contents/MacOS:$PATH"
+          which snow
+          snow --version
+          
+
