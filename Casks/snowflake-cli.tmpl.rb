@@ -1,6 +1,6 @@
 require "mkmf"
 
-cask "snowcli" do
+cask "snowflake-cli" do
   name "Snowflake CLI"
   desc "A CLI for Snowflake development"
   homepage "https://github.com/snowflakedb/snowflake-cli"
@@ -15,6 +15,7 @@ cask "snowcli" do
     else
       sha256 "{{ sf_arm_sha }}"
       arch "arm64"
+    end
   elsif RbConfig::CONFIG["host_os"] == "linux"
     os "linux"
     ext "pkg"
@@ -25,11 +26,13 @@ cask "snowcli" do
     else
       sha256 "{{ sf_linux_aarch_sha }}"
       arch "aaarch64"
+    end
 
     if find_executable0 'dpkg'
       ext "deb"
     elsif find_executable0 'rpm'
       ext "rpm"
+    end
   end
 
   url "https://sfc-repo.snowflakecomputing.com/snowflake-cli/#{os}_#{arch}/#{version}/snowflake-cli-#{version}-#{os}-#{arch}.#{ext}"
