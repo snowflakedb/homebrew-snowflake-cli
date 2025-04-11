@@ -35,9 +35,9 @@ cask "snowcli" do
       ext = "rpm"
     end
   end
-
+  puts "https://sfc-repo.snowflakecomputing.com/snowflake-cli/#{os}_#{arch}/#{version}/snowflake-cli-#{version}-#{os}-#{arch}.#{ext}"
   url "https://sfc-repo.snowflakecomputing.com/snowflake-cli/#{os}_#{arch}/#{version}/snowflake-cli-#{version}-#{os}-#{arch}.#{ext}"
-  puts url
+
   livecheck do
     url "https://sfc-repo.snowflakecomputing.com/snowflake-cli/darwin_arm64/index.html"
     regex(/>(\d+\.\d+\.\d+)</i)
