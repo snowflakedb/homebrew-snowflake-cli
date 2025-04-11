@@ -13,7 +13,6 @@ jobs:
       - name: Install brew
         run: |
           sudo dnf group install "Development Tools"
-          rm -rf /usr/local/include/node/*
           /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
           echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bash_profile
           eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
