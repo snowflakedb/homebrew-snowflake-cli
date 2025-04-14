@@ -1,4 +1,4 @@
-class "Snowflake-cli" < Formula
+class Snowflake-cli < Formula
     desc "A CLI for Snowflake development"
   homepage "https://github.com/snowflakedb/snowflake-cli"
   version "3.6.0"
