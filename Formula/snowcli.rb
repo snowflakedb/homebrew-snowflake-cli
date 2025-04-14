@@ -6,7 +6,6 @@ class Snowcli < Formula
   os = OS.mac? ? "darwin" : "linux"
 
   if os == "darwin"
-    ext = ".pkg"
     if Hardware::CPU.intel?
       arch = "x86_64"
       sha = "0dc0573d0964708ddbc72a8f8c419c16283a86d6f8e1779d1e5e40cbb723d4fe"
@@ -14,6 +13,8 @@ class Snowcli < Formula
       arch = "arm64"
       sha = "571062aa89f261193aa711468133de655d3346a2f6bf693b74f35fea888c4e51"
     end
+    url "https://sfc-repo.snowflakecomputing.com/snowflake-cli/darwin_#{arch}/#{version}/snowflake-cli-#{version}.#{arch}.pkg"
+
   elsif os == "linux"
     if Hardware::CPU.intel?
       arch = "x86_64"
@@ -29,9 +30,10 @@ class Snowcli < Formula
           else
             raise "Unsupported Linux distribution"
           end
+    url "https://sfc-repo.snowflakecomputing.com/snowflake-cli/linux_#{arch}"/#{version}/snowflake-cli-#{version}.#{arch}.#{ext}"
   end
 
-  url "https://sfc-repo.snowflakecomputing.com/snowflake-cli/#{os}_#{arch}/#{version}/snowflake-cli-#{version}-#{os}-#{arch}.#{ext}"
+  url "https://sfc-repo.snowflakecomputing.com/snowflake-cli/#{os}_#{arch}/#{version}/snowflake-cli-#{version}.#{arch}.#{ext}"
 
 
   def install
