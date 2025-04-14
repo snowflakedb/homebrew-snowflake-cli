@@ -1,5 +1,5 @@
 class Snowcli < Formula
-    desc "A CLI for Snowflake development"
+  desc "A CLI for Snowflake development"
   homepage "https://github.com/snowflakedb/snowflake-cli"
   version "3.6.0"
 
@@ -21,7 +21,7 @@ class Snowcli < Formula
     else
       arch = "aaarch64"
       sha = "f42bef605184f19facff945848f80e9864469663da458d84ee0385da2ce67864"
-
+    end
     ext = if which("dpkg")
             "deb"
           elsif which("rpm")
