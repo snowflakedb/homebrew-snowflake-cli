@@ -23,11 +23,11 @@ jobs:
           eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
           export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin/brew
           brew doctor
-          brew install --debug --cask ./Casks/snowflake-cli.rb
+          brew install --formula ./Formula/snowflake-cli.rb
           export PATH="/Applications/SnowflakeCLI.app/Contents/MacOS:$PATH"
           which snow        
           snow --version
-          brew install --debug --cask ./Casks/snowcli.rb
+          brew install --formula ./Formula/snowflake-cli.rb
           export PATH="/Applications/SnowCLI.app/Contents/MacOS:$PATH"
           which snow
           snow --version

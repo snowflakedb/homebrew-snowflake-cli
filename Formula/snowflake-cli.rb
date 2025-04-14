@@ -31,17 +31,8 @@ class "Snowflake-cli" < Formula
 
 
   def install
-    if OS.mac?
-      system "installer", "-pkg", cached_download, "-target", "CurrentUserHomeDirectory"
-    else
-      if ext == "deb"
-        system "dpkg", "-i", cached_download
-      elsif ext == "rpm"
-        system "rpm", "-i", cached_download
-      end
-    end
+    puts "download:  #{cached_download}"
     bin.install cached_download
-
   end
 
   test do
