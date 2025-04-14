@@ -1,23 +1,27 @@
 class Snowcli < Formula
-  desc "A CLI for Snowflake development"
+    desc "A CLI for Snowflake development"
   homepage "https://github.com/snowflakedb/snowflake-cli"
   version "3.6.0"
-
-  bottle do
-    root_url "https://sfc-repo.snowflakecomputing.com/snowflake-cli"
-    sha256  arm64_macos: "571062aa89f261193aa711468133de655d3346a2f6bf693b74f35fea888c4e51"
-    sha256  x86_64_macos: "0dc0573d0964708ddbc72a8f8c419c16283a86d6f8e1779d1e5e40cbb723d4fe"
-    sha256  x86_64_linux: "38d39b391d759ec27fdeabe2da902be0367b642632bf59ce1181ec15966a9dd5"
-    sha256  aarch64_linux: "f42bef605184f19facff945848f80e9864469663da458d84ee0385da2ce67864"
-  end
 
   os = OS.mac? ? "darwin" : "linux"
 
   if os == "darwin"
-    arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
-    ext = "pkg"
+    ext = ".pkg"
+    if Hardware::CPU.intel?
+      arch = "x86_64"
+      sha = "0dc0573d0964708ddbc72a8f8c419c16283a86d6f8e1779d1e5e40cbb723d4fe"
+    else
+      arch = "arm64"
+      sha = "571062aa89f261193aa711468133de655d3346a2f6bf693b74f35fea888c4e51"
+    end
   elsif os == "linux"
-    arch = Hardware::CPU.intel? ? "x86_64" : "aaarch64"
+    if Hardware::CPU.intel?
+      arch = "x86_64"
+      sha = "38d39b391d759ec27fdeabe2da902be0367b642632bf59ce1181ec15966a9dd5"
+    else
+      arch = "aaarch64"
+      sha = "f42bef605184f19facff945848f80e9864469663da458d84ee0385da2ce67864"
+
     ext = if which("dpkg")
             "deb"
           elsif which("rpm")
@@ -31,17 +35,8 @@ class Snowcli < Formula
 
 
   def install
-    if OS.mac?
-      system "installer", "-pkg", cached_download, "-target", "CurrentUserHomeDirectory"
-    else
-      if ext == "deb"
-        system "dpkg", "-i", cached_download
-      elsif ext == "rpm"
-        system "rpm", "-i", cached_download
-      end
-    end
+    puts "download:  #{cached_download}"
     bin.install cached_download
-
   end
 
   test do
