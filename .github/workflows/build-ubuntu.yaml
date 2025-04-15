@@ -1,0 +1,35 @@
+name: Build[Ubuntu]
+
+on: [push]
+
+jobs:
+  build:
+    name: Build packages
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install brew
+        run: |
+          sudo apt update
+          sudo apt-get install build-essential
+          sudo rm -rf /usr/local/include/node/*
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      - name: Add brew to path
+        run: |
+          echo >> /home/runner/.bashrc
+          echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/runner/.bashrc
+          eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+          export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin/brew
+          brew doctor
+          brew install --formula ./Formula/snowflake-cli.rb --debug
+          export PATH="/Applications/SnowflakeCLI.app/Contents/MacOS:$PATH"
+          which snow        
+          snow --version
+          brew install --formula ./Formula/snowflake-cli.rb --debug
+          export PATH="/Applications/SnowCLI.app/Contents/MacOS:$PATH"
+          which snow
+          snow --version
+          
+

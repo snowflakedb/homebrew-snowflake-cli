@@ -1,0 +1,31 @@
+name: Build[Fedora]
+
+on: [push]
+
+jobs:
+  build:
+    name: Build packages
+    runs-on: fedora-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install brew
+        run: |
+          sudo dnf group install "Development Tools"
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bash_profile
+          eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+          brew doctor
+      - name: Install and check casks
+        run: |
+          brew install --debug --formula ./Formula/snowflake-cli.rb
+          export PATH="/Applications/SnowflakeCLI.app/Contents/MacOS:$PATH"
+          which snow        
+          snow --version
+          brew install --formula ./Formula/snowflake-cli.rb
+          export PATH="/Applications/SnowCLI.app/Contents/MacOS:$PATH"
+          which snow
+          snow --version
+          
+
