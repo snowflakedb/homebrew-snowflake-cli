@@ -37,3 +37,8 @@ class SnowflakeCli < Formula
     puts "download:  #{cached_download}"
     bin.install cached_download
   end
+
+  test do
+    system "#{bin}/snow", "--version"
+  end
+end
