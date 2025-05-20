@@ -2,14 +2,14 @@ cask "snowcli" do
   name "Snowflake CLI"
   desc "A CLI for Snowflake development"
   homepage "https://github.com/snowflakedb/snowflake-cli"
-  version "3.8.0"
+  version "3.8.1"
 
   arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
 
   if Hardware::CPU.intel?
-    sha256 "f244bda2f785fb9ac8bc38fd03a521d0c5314910c2ee62d807f6be9efbbdb7c9"
+    sha256 "407569072a99f8f07427abea2b89d7201c43dd0ddb122cf21c1c6c04da8bf14c"
   else
-    sha256 "496cf4ea09cd09ca52ec0848a8049b5b90981fdd091195144d50d198c57d3afd"
+    sha256 "efb5fe8bf1f56ac4b0f296ddf5b60d24f481e6ef43c61bfba6698ecb4aa5addb"
   end
 
   url "https://sfc-repo.snowflakecomputing.com/snowflake-cli/darwin_#{arch}/#{version}/snowflake-cli-#{version}-darwin-#{arch}.pkg"
