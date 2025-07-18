@@ -5,6 +5,33 @@ from pathlib import Path
 
 import jinja2
 
+
+class SemVer:
+    """Simple semantic version class for comparison"""
+    
+    def __init__(self, version_str: str):
+        parts = version_str.split('.')
+        if len(parts) != 3:
+            raise ValueError(f"Invalid version format: {version_str}")
+        
+        self.major = int(parts[0])
+        self.minor = int(parts[1])
+        self.patch = int(parts[2])
+        self.version_str = version_str
+    
+    def __lt__(self, other):
+        return (self.major, self.minor, self.patch) < (other.major, other.minor, other.patch)
+    
+    def __gt__(self, other):
+        return (self.major, self.minor, self.patch) > (other.major, other.minor, other.patch)
+    
+    def __eq__(self, other):
+        return (self.major, self.minor, self.patch) == (other.major, other.minor, other.patch)
+    
+    def __str__(self):
+        return self.version_str
+
+
 SNOWFLAKE_REPO = "https://sfc-repo.snowflakecomputing.com/snowflake-cli/darwin_{0}/index.html"
 VERSION_DIR = "https://sfc-repo.snowflakecomputing.com/snowflake-cli/darwin_{0}/{1}/index.html"
 VERSION_PATTERN = r">(\d+\.\d+\.\d+)<"
@@ -54,7 +81,7 @@ def get_remote_file_directory(architecture: str, version: str) -> str:
 
 def find_latest_version(site_text: str) -> str:
     matches = re.findall(VERSION_PATTERN, site_text)
-    return max(matches)
+    return str(max(matches, key=SemVer))
 
 def get_sha_for_latest_version_file(architecture:str) -> str:
     latest_version = find_latest_version(get_repo_html(architecture))
