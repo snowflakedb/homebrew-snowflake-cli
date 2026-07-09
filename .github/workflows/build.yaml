@@ -29,7 +29,7 @@ jobs:
         run: |
           brew tap snowflakedb/snowflake-cli "$(pwd)"
           brew install --debug --cask snowflakedb/snowflake-cli/snowcli
-          export PATH="/Applications/SnowCLI.app/Contents/MacOS:$PATH"
+          export PATH="/Applications/SnowflakeCLI.app/Contents/MacOS:$PATH"
           which snow
           snow --version
 
