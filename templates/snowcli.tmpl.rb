@@ -16,7 +16,7 @@ cask "snowcli" do
 
   livecheck do
     url "https://sfc-repo.snowflakecomputing.com/snowflake-cli/darwin_arm64/index.html"
-    regex(/>(\d+\.\d+\.\d+)</i)
+    regex(/<p style="display: none">(\d+\.\d+\.\d+)\//i)
   end
 
   pkg "snowflake-cli-#{version}-darwin-#{arch}.pkg"
