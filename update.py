@@ -34,7 +34,7 @@ class SemVer:
 
 SNOWFLAKE_REPO = "https://sfc-repo.snowflakecomputing.com/snowflake-cli/darwin_{0}/index.html"
 VERSION_DIR = "https://sfc-repo.snowflakecomputing.com/snowflake-cli/darwin_{0}/{1}/index.html"
-VERSION_PATTERN = r">(\d+\.\d+\.\d+)<"
+VERSION_PATTERN = r'<p style="display: none">(\d+\.\d+\.\d+)/</p>'
 SHA_PATTERN = r"<div style=\"font-family: monospace;\">([a-f0-9]{64})</div>"
 INTEL = "x86_64"
 ARM = "arm64"
@@ -44,7 +44,7 @@ def main(template_name: str, file_name):
         loader=jinja2.loaders.FileSystemLoader(Path(__file__).parent)
     )
 
-    template_path = Path("Casks") / template_name
+    template_path = Path("templates") / template_name
     file_path = Path("Casks") / file_name
 
     template = env.get_template(str(template_path))
