@@ -20,5 +20,5 @@ cask "snowcli" do
   end
 
   pkg "snowflake-cli-#{version}-darwin-#{arch}.pkg"
-  uninstall pkgutil: "com.snowflake.cli"
+  uninstall pkgutil: "com.snowflake.snowflake-cli"
 end
