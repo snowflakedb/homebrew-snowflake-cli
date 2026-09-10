@@ -2,3 +2,5 @@
 .idea
 homebrew-tmp-env/
 .venv
+__pycache__/
+.pytest_cache/
