@@ -12,6 +12,17 @@ To update the formula run:
 bash update.sh
 ```
 
+### Running tests
+
+```shell
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+pytest tests/
+```
+
+Pull requests targeting `main` run the same suite in GitHub Actions.
+
 ### Testing casks locally
 
 Register the local repo as a tap and install a cask from it:
