@@ -2,6 +2,9 @@ name: Build
 
 on: [push]
 
+permissions:
+  contents: read
+
 jobs:
   build-snowflake-cli:
     name: Build snowflake-cli cask
