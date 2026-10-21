@@ -5,7 +5,7 @@ import pytest
 
 REPOSITORY_ROOT = Path(__file__).parent.parent
 UNINSTALL_STANZA = (
-    'uninstall pkgutil: "com.snowflake.snowflake-cli",\n'
+    r"uninstall pkgutil: '\Acom\.snowflake\.snowflake-cli\z'," "\n"
     '            delete: "/etc/paths.d/snowflake-cli"'
 )
 
